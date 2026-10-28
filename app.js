@@ -2,6 +2,7 @@ import express, { json } from 'express'
 import "dotenv/config"
 import cookieParser from 'cookie-parser'
 import { startDB } from './src/config/database.js'
+import cors from 'cors'
 
 const app = express()
 const PORT = process.env.PORT || 3005
