@@ -1,4 +1,4 @@
-import { Model, Schema, Types } from "mongoose";
+import { model, Model, Schema } from "mongoose";
 
 const userSchema = new Schema({
   username: {
@@ -16,6 +16,8 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
+    select: false,
+    required: true
   },
   role: {
     type: String,
@@ -25,7 +27,7 @@ const userSchema = new Schema({
   profile: {
     first_name: {
       type: String,
-      minlenght: 2,
+      minlength: 2,
       maxlength: 50,
     },
     last_name: {
@@ -42,6 +44,21 @@ const userSchema = new Schema({
       required: false,
     },
   },
+  deletedAt:{
+    type: Date,
+    default: null
+  }
 },{
-  deleted
+  timestamps: true,
+  toJSON: {virtuals: true},
+  toObject: {virtuals: true },
+  versionKey: false
 });
+
+userSchema.virtual("Events",  {
+  ref: "Event",
+  localField: "_id",
+  foreignField: "organizer",
+})
+
+export const userMOdel = model("User", userSchema);
