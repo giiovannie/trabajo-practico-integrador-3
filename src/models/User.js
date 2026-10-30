@@ -61,4 +61,4 @@ userSchema.virtual("Events",  {
   foreignField: "organizer",
 })
 
-export const userMOdel = model("User", userSchema);
+export const userModel = model("User", userSchema);
