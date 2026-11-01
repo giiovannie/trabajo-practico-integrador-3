@@ -1,6 +1,6 @@
 import { body, param } from "express-validator";
-import { eventModel } from "../../models/event.model.js";
-import { categoryModel } from "../../models/category.model.js";
+import { eventModel } from "../../models/Event.js";
+import { categoryModel } from "../../models/Category.js";
 
 export const eventCreateValidations = [
   body("title")

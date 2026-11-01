@@ -1,6 +1,6 @@
 import { matchedData } from "express-validator";
-import { userModel } from "../models/user.model.js";
-import { eventModel } from "../models/event.model.js";
+import { userModel } from "../models/User.js";
+import { eventModel } from "../models/Event.js";
 
 export const getUsers = async (req, res) => {
   try {

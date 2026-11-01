@@ -1,4 +1,4 @@
-import { eventModel } from "../models/event.model.js"; // antes ArticleModel
+import { eventModel } from "../models/Event.js"; // antes ArticleModel
 
 export const ownerOrAdminMiddleware = async (req,res,next)=>{
   try {

@@ -1,6 +1,6 @@
 import { matchedData } from "express-validator";
-import { categoryModel } from "../models/category.model.js";
-import { eventModel } from "../models/event.model.js";
+import { categoryModel } from "../models/Category.js";
+import { eventModel } from "../models/Event.js";
 
 // POST /api/categories (solo admin)
 export const createCategory = async (req, res) => {

@@ -1,5 +1,5 @@
 import { matchedData } from "express-validator";
-import { eventModel } from "../models/event.model.js";
+import { eventModel } from "../models/Event.js";
 
 export const createEvent = async (req, res) => {
   try {
