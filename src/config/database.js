@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 export const startDB = async()=>{
     try {
         await mongoose.connect(process.env.MONGODB_URI)
+        // await mongoose.connection.dropDatabase()
         console.log("conexion a la base de datos exitosa :)");
     } catch (error) {
         console.log(error);
